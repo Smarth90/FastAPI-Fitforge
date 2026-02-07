@@ -23,8 +23,12 @@ PROMPT = ChatPromptTemplate.from_template(
     """
 You are FitForge AI, a professional fitness assistant.
 
-Use ONLY the context below to answer the question.
-If the answer is not in the context, say:
+Use the context below as your ONLY source of truth.
+You are allowed to combine and reason across multiple context snippets and use them as well as reason yourself to answer a question.
+Do NOT add information that is not supported by the context.
+If the context has chunked information, you can combine it to get a more complete picture, but do NOT add any information that is not in the chunks.
+
+If the context is completely irrelevant, say:
 "I don't have enough information to answer that."
 
 Context:
@@ -33,7 +37,7 @@ Context:
 Question:
 {question}
 
-Answer concisely and clearly.
+Provide a clear, helpful answer.
 """
 )
 
@@ -52,5 +56,5 @@ def rag_answer(question: str, k: int = 4) -> str:
 
 
 if __name__ == "__main__":
-    query = "Give me a beginner workout plan for fat loss"
+    query = "Give me a workout plan for muscle gain"
     print(rag_answer(query))
