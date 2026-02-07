@@ -13,3 +13,7 @@ langchain
 langchain-community
 langchain-core
 google-generativeai
+langchain-huggingface
+tf-keras
+langchain-text-splitters
+faiss-cpu

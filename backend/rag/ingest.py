@@ -3,7 +3,7 @@ from pathlib import Path
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "data"
@@ -18,7 +18,7 @@ def load_json_files():
         print(f"Loading {file.name}")
         with open(file , 'r' ,encoding='utf-8') as f:
             data = json.load(f)
-            text = (f"Source file: {file.name}\nContent:\n{json.dumps(data, ident = 2)}" )
+            text = (f"Source file: {file.name}\nContent:\n{json.dumps(data, indent = 2)}" )
             documents.append(text)
     return documents
 
