@@ -1,0 +1,20 @@
+{
+  "Comment": "This JSON file contains a dataset for a fitness chatbot. It includes various fitness-related questions and answers. Each entry has a unique ID, a question, and an answer. The dataset is designed to help the chatbot provide accurate and helpful responses to user inquiries about fitness topics.",
+  "data": [
+    {
+      "id": "1",
+      "question": "What is HIIT?",
+      "answer": "HIIT, or High-Intensity Interval Training, involves short bursts of intense exercise followed by rest periods. It’s great for fat loss and cardiovascular health."
+    },
+    {
+      "id": "2",
+      "question": "How often should I work out?",
+      "answer": "Aim for at least 3-5 days a week, depending on your goals. Include rest days for recovery."
+    },
+    {
+      "id": "3",
+      "question": "What is a good post-workout meal?",
+      "answer": "A good post-workout meal includes protein (e.g., chicken) and carbs (e.g., rice) to aid muscle recovery and replenish energy."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "general_queries": [
+    {
+      "question": "What is the best time to exercise?",
+      "answer": "The best time depends on your schedule and body. Morning workouts can boost metabolism, while evening sessions may improve performance due to warmer muscles. Consistency matters more than timing.",
+      "category": "Exercise Tips"
+    },
+    {
+      "question": "How much water should I drink daily?",
+      "answer": "Aim for 2-3 liters (about 8-12 cups) daily, but adjust based on activity level, climate, and body size. During workouts, add 500ml-1L extra.",
+      "category": "Health Basics"
+    },
+    {
+      "question": "What are the benefits of stretching?",
+      "answer": "Stretching improves flexibility, reduces injury risk, enhances blood flow, and relieves muscle tension. Include 5-10 minutes of stretching before and after workouts.",
+      "category": "Exercise Tips"
+    },
+    {
+      "question": "Is cardio better than weight training?",
+      "answer": "Neither is 'better'—it depends on your goal. Cardio burns fat and improves heart health; weight training builds muscle and strength. A mix of both is ideal for overall fitness.",
+      "category": "Exercise Tips"
+    },
+    {
+      "question": "What should I eat before a workout?",
+      "answer": "Eat a small meal with carbs and protein 1-2 hours before, like a banana with peanut butter or oatmeal with yogurt. Avoid heavy or fatty foods.",
+      "category": "Nutrition"
+    },
+    {
+      "question": "How do I avoid muscle soreness?",
+      "answer": "Soreness (DOMS) is normal after new exercises. Prevent it with proper warm-ups, gradual intensity increases, stretching, and hydration. Rest and protein intake help recovery.",
+      "category": "Health Basics"
+    },
+    {
+      "question": "What is a good warm-up routine?",
+      "answer": "A good warm-up includes 5-10 minutes of light cardio (e.g., jogging), dynamic stretches (e.g., leg swings), and light sets of your first exercise. This prepares muscles and joints.",
+      "category": "Exercise Tips"
+    },
+    {
+      "question": "Can I exercise with an injury?",
+      "answer": "Consult a doctor first. Light activity may be okay if it doesn’t worsen the injury, but avoid stressing the affected area. Rest and rehab are often best.",
+      "category": "Health Basics"
+    }
+  ]
+}

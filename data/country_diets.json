@@ -1,0 +1,463 @@
+{
+  "IN": {
+    "staple_foods": [
+      "rice",
+      "dal",
+      "roti",
+      "millets"
+    ],
+    "dietary_patterns": [
+      "vegetarian_heavy",
+      "spicy",
+      "high_carb"
+    ],
+    "guidelines": "ICMR-NIN",
+    "cultural_notes": [
+      "Fasting during festivals like Navratri",
+      "Preference for ghee"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Dal paratha",
+        "Curd",
+        200
+      ],
+      "lunch": [
+        "Rice",
+        "Lentil curry",
+        "Roti",
+        400
+      ],
+      "dinner": [
+        "Vegetable sabzi",
+        "Chapati",
+        350
+      ]
+    }
+  },
+  "US": {
+    "staple_foods": [
+      "bread",
+      "chicken",
+      "potatoes",
+      "salads"
+    ],
+    "dietary_patterns": [
+      "mixed",
+      "high_protein"
+    ],
+    "guidelines": "USDA",
+    "cultural_notes": [
+      "Fast food prevalence",
+      "Large portion sizes"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Oatmeal",
+        "Fruit",
+        250
+      ],
+      "lunch": [
+        "Grilled chicken",
+        "Salad",
+        400
+      ],
+      "dinner": [
+        "Salmon",
+        "Quinoa",
+        "Vegetables",
+        450
+      ]
+    }
+  },
+  "JP": {
+    "staple_foods": [
+      "rice",
+      "fish",
+      "tofu",
+      "seaweed"
+    ],
+    "dietary_patterns": [
+      "low_fat",
+      "high_seafood"
+    ],
+    "guidelines": "Japanese Ministry of Health",
+    "cultural_notes": [
+      "Small portions",
+      "Fermented foods like miso"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Miso soup",
+        "Tofu",
+        150
+      ],
+      "lunch": [
+        "Sushi roll",
+        "Edamame",
+        300
+      ],
+      "dinner": [
+        "Grilled fish",
+        "Rice",
+        "Seaweed salad",
+        350
+      ]
+    }
+  },
+  "CN": {
+    "staple_foods": [
+      "rice",
+      "noodles",
+      "soy products",
+      "pork"
+    ],
+    "dietary_patterns": [
+      "balanced",
+      "vegetable_rich"
+    ],
+    "guidelines": "Chinese Dietary Guidelines",
+    "cultural_notes": [
+      "Hot meals are preferred",
+      "Tea with meals"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Congee",
+        "Pickled vegetables",
+        180
+      ],
+      "lunch": [
+        "Stir-fried vegetables",
+        "Rice",
+        "Pork",
+        400
+      ],
+      "dinner": [
+        "Noodle soup",
+        "Steamed buns",
+        350
+      ]
+    }
+  },
+  "BR": {
+    "staple_foods": [
+      "rice",
+      "beans",
+      "manioc",
+      "beef"
+    ],
+    "dietary_patterns": [
+      "high_protein",
+      "legume_rich"
+    ],
+    "guidelines": "Brazilian Dietary Guidelines",
+    "cultural_notes": [
+      "Main meal at lunch",
+      "Fresh juices common"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Bread with cheese",
+        "Coffee",
+        250
+      ],
+      "lunch": [
+        "Rice",
+        "Beans",
+        "Grilled beef",
+        450
+      ],
+      "dinner": [
+        "Soup",
+        "Salad",
+        "Tapioca",
+        350
+      ]
+    }
+  },
+  "RU": {
+    "staple_foods": [
+      "potatoes",
+      "bread",
+      "cabbage",
+      "meat"
+    ],
+    "dietary_patterns": [
+      "high_fat",
+      "hearty"
+    ],
+    "guidelines": "Russian Federation Guidelines",
+    "cultural_notes": [
+      "Hearty soups",
+      "Fermented dairy popular"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Kasha",
+        "Tea",
+        200
+      ],
+      "lunch": [
+        "Borscht",
+        "Bread",
+        "Meat cutlet",
+        400
+      ],
+      "dinner": [
+        "Potatoes",
+        "Stew",
+        "Salad",
+        380
+      ]
+    }
+  },
+  "NG": {
+    "staple_foods": [
+      "yam",
+      "cassava",
+      "rice",
+      "beans"
+    ],
+    "dietary_patterns": [
+      "high_carb",
+      "spicy"
+    ],
+    "guidelines": "Nigeria Food-Based Dietary Guidelines",
+    "cultural_notes": [
+      "Spicy stews",
+      "Fufu-based dishes"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Moi Moi",
+        "Pap",
+        250
+      ],
+      "lunch": [
+        "Jollof rice",
+        "Fried plantain",
+        "Meat",
+        500
+      ],
+      "dinner": [
+        "Eba",
+        "Egusi soup",
+        400
+      ]
+    }
+  },
+  "ZA": {
+    "staple_foods": [
+      "maize",
+      "meat",
+      "beans",
+      "vegetables"
+    ],
+    "dietary_patterns": [
+      "mixed",
+      "meat_centric"
+    ],
+    "guidelines": "South African Food-Based Dietary Guidelines",
+    "cultural_notes": [
+      "Braai culture",
+      "Pap as staple"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Mealie meal porridge",
+        "Tea",
+        220
+      ],
+      "lunch": [
+        "Pap",
+        "Chakalaka",
+        "Meat",
+        450
+      ],
+      "dinner": [
+        "Stew",
+        "Rice",
+        "Beans",
+        400
+      ]
+    }
+  },
+  "FR": {
+    "staple_foods": [
+      "bread",
+      "cheese",
+      "wine",
+      "potatoes"
+    ],
+    "dietary_patterns": [
+      "balanced",
+      "moderate_portions"
+    ],
+    "guidelines": "PNNS (Programme National Nutrition Sant\u00e9)",
+    "cultural_notes": [
+      "Long mealtimes",
+      "High culinary standards"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Croissant",
+        "Coffee",
+        300
+      ],
+      "lunch": [
+        "Grilled chicken",
+        "Ratatouille",
+        "Baguette",
+        450
+      ],
+      "dinner": [
+        "Soup",
+        "Cheese",
+        "Bread",
+        400
+      ]
+    }
+  },
+  "MX": {
+    "staple_foods": [
+      "corn",
+      "beans",
+      "rice",
+      "chili"
+    ],
+    "dietary_patterns": [
+      "high_spice",
+      "legume_rich"
+    ],
+    "guidelines": "Mexican Official Standard NOM-043-SSA2-2012",
+    "cultural_notes": [
+      "Tortilla with every meal",
+      "Street food culture"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Chilaquiles",
+        "Beans",
+        350
+      ],
+      "lunch": [
+        "Tacos",
+        "Rice",
+        "Salsa",
+        450
+      ],
+      "dinner": [
+        "Tamales",
+        "Salad",
+        400
+      ]
+    }
+  },
+  "UK": {
+    "staple_foods": [
+      "potatoes",
+      "bread",
+      "meat",
+      "tea"
+    ],
+    "dietary_patterns": [
+      "meat_heavy",
+      "moderate_veg"
+    ],
+    "guidelines": "NHS Eatwell Guide",
+    "cultural_notes": [
+      "High tea culture",
+      "Roast dinners"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Porridge",
+        "Toast",
+        300
+      ],
+      "lunch": [
+        "Fish and chips",
+        "Peas",
+        500
+      ],
+      "dinner": [
+        "Roast beef",
+        "Vegetables",
+        "Gravy",
+        450
+      ]
+    }
+  },
+  "AU": {
+    "staple_foods": [
+      "meat",
+      "bread",
+      "dairy",
+      "vegetables"
+    ],
+    "dietary_patterns": [
+      "protein_rich",
+      "multicultural"
+    ],
+    "guidelines": "Australian Dietary Guidelines",
+    "cultural_notes": [
+      "BBQ culture",
+      "Multicultural influences"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Toast with avocado",
+        "Coffee",
+        300
+      ],
+      "lunch": [
+        "Grilled chicken",
+        "Salad",
+        400
+      ],
+      "dinner": [
+        "Steak",
+        "Potatoes",
+        "Veggies",
+        450
+      ]
+    }
+  },
+  "DE": {
+    "staple_foods": [
+      "bread",
+      "potatoes",
+      "pork",
+      "cabbage"
+    ],
+    "dietary_patterns": [
+      "hearty",
+      "meat_heavy"
+    ],
+    "guidelines": "German Nutrition Society (DGE) Guidelines",
+    "cultural_notes": [
+      "Cold breakfasts",
+      "Sausage culture"
+    ],
+    "sample_meal": {
+      "breakfast": [
+        "Br\u00f6tchen",
+        "Cold cuts",
+        300
+      ],
+      "lunch": [
+        "Sausages",
+        "Sauerkraut",
+        "Potatoes",
+        500
+      ],
+      "dinner": [
+        "Bread",
+        "Cheese",
+        "Pickles",
+        400
+      ]
+    }
+  }
+}

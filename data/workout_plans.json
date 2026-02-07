@@ -1,0 +1,182 @@
+{
+  "workout_plans": [
+    {
+      "stage": "muscle_gain",
+      "description": "A hypertrophy-focused plan to maximize muscle growth with progressive overload and adequate recovery.",
+      "weekly_schedule": {
+        "Monday": {
+          "focus": "Chest and Triceps",
+          "exercises": [
+            {"name": "Barbell Bench Press", "sets": 4, "reps": "8-12", "rest": "90s"},
+            {"name": "Incline Dumbbell Press", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Cable Flyes", "sets": 3, "reps": "12-15", "rest": "60s"},
+            {"name": "Tricep Dips", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Overhead Tricep Extension", "sets": 3, "reps": "12-15", "rest": "60s"}
+          ]
+        },
+        "Tuesday": {
+          "focus": "Back and Biceps",
+          "exercises": [
+            {"name": "Deadlifts", "sets": 4, "reps": "6-8", "rest": "90s"},
+            {"name": "Pull-Ups (Weighted)", "sets": 3, "reps": "8-10", "rest": "60s"},
+            {"name": "Bent-Over Rows", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Barbell Curls", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Hammer Curls", "sets": 3, "reps": "12-15", "rest": "60s"}
+          ]
+        },
+        "Wednesday": {
+          "focus": "Rest or Active Recovery",
+          "exercises": []
+        },
+        "Thursday": {
+          "focus": "Legs and Core",
+          "exercises": [
+            {"name": "Barbell Squats", "sets": 4, "reps": "8-10", "rest": "90s"},
+            {"name": "Romanian Deadlifts", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Leg Press", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Leg Extensions", "sets": 3, "reps": "12-15", "rest": "60s"},
+            {"name": "Plank", "sets": 3, "reps": "30s", "rest": "30s"}
+          ]
+        },
+        "Friday": {
+          "focus": "Shoulders and Core",
+          "exercises": [
+            {"name": "Overhead Press", "sets": 4, "reps": "8-10", "rest": "90s"},
+            {"name": "Lateral Raises", "sets": 3, "reps": "12-15", "rest": "60s"},
+            {"name": "Front Raises", "sets": 3, "reps": "12-15", "rest": "60s"},
+            {"name": "Hanging Leg Raises", "sets": 3, "reps": "15-20", "rest": "30s"}
+          ]
+        },
+        "Saturday": {
+          "focus": "Full Body",
+          "exercises": [
+            {"name": "Incline Bench Press", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Lat Pulldowns", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Dumbbell Lunges", "sets": 3, "reps": "12-15", "rest": "60s"},
+            {"name": "Russian Twists", "sets": 3, "reps": "20", "rest": "30s"}
+          ]
+        },
+        "Sunday": {
+          "focus": "Rest",
+          "exercises": []
+        }
+      }
+    },
+    {
+      "stage": "body_recomp",
+      "description": "A balanced plan to build muscle and reduce fat through moderate intensity and higher volume.",
+      "weekly_schedule": {
+        "Monday": {
+          "focus": "Upper Body Push",
+          "exercises": [
+            {"name": "Dumbbell Bench Press", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Incline Push-Ups", "sets": 3, "reps": "12-15", "rest": "60s"},
+            {"name": "Shoulder Press", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Tricep Pushdowns", "sets": 3, "reps": "12-15", "rest": "45s"}
+          ]
+        },
+        "Tuesday": {
+          "focus": "Lower Body",
+          "exercises": [
+            {"name": "Goblet Squats", "sets": 3, "reps": "12-15", "rest": "60s"},
+            {"name": "Bulgarian Split Squats", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Calf Raises", "sets": 3, "reps": "15-20", "rest": "45s"},
+            {"name": "Bicycle Crunches", "sets": 3, "reps": "20", "rest": "30s"}
+          ]
+        },
+        "Wednesday": {
+          "focus": "Cardio or Active Recovery",
+          "exercises": [
+            {"name": "HIIT (e.g., Sprint Intervals)", "sets": 6, "reps": "30s sprint/60s walk", "rest": "0s"}
+          ]
+        },
+        "Thursday": {
+          "focus": "Upper Body Pull",
+          "exercises": [
+            {"name": "Pull-Ups or Lat Pulldowns", "sets": 3, "reps": "10-12", "rest": "60s"},
+            {"name": "Dumbbell Rows", "sets": 3, "reps": "12-15", "rest": "60s"},
+            {"name": "Face Pulls", "sets": 3, "reps": "12-15", "rest": "45s"},
+            {"name": "Dumbbell Curls", "sets": 3, "reps": "12-15", "rest": "45s"}
+          ]
+        },
+        "Friday": {
+          "focus": "Full Body Circuit",
+          "exercises": [
+            {"name": "Kettlebell Swings", "sets": 3, "reps": "15-20", "rest": "45s"},
+            {"name": "Push-Ups", "sets": 3, "reps": "12-15", "rest": "45s"},
+            {"name": "Bodyweight Squats", "sets": 3, "reps": "15-20", "rest": "45s"},
+            {"name": "Plank", "sets": 3, "reps": "30s", "rest": "30s"}
+          ]
+        },
+        "Saturday": {
+          "focus": "Rest",
+          "exercises": []
+        },
+        "Sunday": {
+          "focus": "Cardio",
+          "exercises": [
+            {"name": "Steady-State Cardio (e.g., Jogging)", "sets": 1, "reps": "20-30 min", "rest": "0s"}
+          ]
+        }
+      }
+    },
+    {
+      "stage": "fat_loss",
+      "description": "A high-intensity plan with a focus on calorie burning through circuit training and cardio.",
+      "weekly_schedule": {
+        "Monday": {
+          "focus": "Full Body HIIT",
+          "exercises": [
+            {"name": "Burpees", "sets": 4, "reps": "15", "rest": "30s"},
+            {"name": "Mountain Climbers", "sets": 4, "reps": "20", "rest": "30s"},
+            {"name": "Kettlebell Swings", "sets": 4, "reps": "20", "rest": "30s"},
+            {"name": "Push-Ups", "sets": 4, "reps": "12-15", "rest": "30s"}
+          ]
+        },
+        "Tuesday": {
+          "focus": "Cardio",
+          "exercises": [
+            {"name": "Interval Running", "sets": 8, "reps": "30s sprint/90s jog", "rest": "0s"}
+          ]
+        },
+        "Wednesday": {
+          "focus": "Core and Lower Body",
+          "exercises": [
+            {"name": "Bodyweight Squats", "sets": 4, "reps": "20", "rest": "30s"},
+            {"name": "Lunges", "sets": 3, "reps": "15 per leg", "rest": "30s"},
+            {"name": "Russian Twists", "sets": 3, "reps": "20", "rest": "30s"},
+            {"name": "Plank", "sets": 3, "reps": "30-45s", "rest": "30s"}
+          ]
+        },
+        "Thursday": {
+          "focus": "Rest or Active Recovery",
+          "exercises": []
+        },
+        "Friday": {
+          "focus": "Upper Body Circuit",
+          "exercises": [
+            {"name": "Dumbbell Shoulder Press", "sets": 3, "reps": "15", "rest": "30s"},
+            {"name": "Push-Ups", "sets": 3, "reps": "15-20", "rest": "30s"},
+            {"name": "Dumbbell Rows", "sets": 3, "reps": "15", "rest": "30s"},
+            {"name": "Tricep Dips", "sets": 3, "reps": "12-15", "rest": "30s"}
+          ]
+        },
+        "Saturday": {
+          "focus": "Cardio",
+          "exercises": [
+            {"name": "Cycling or Rowing", "sets": 1, "reps": "20-30 min", "rest": "0s"}
+          ]
+        },
+        "Sunday": {
+          "focus": "Full Body Circuit",
+          "exercises": [
+            {"name": "Jump Squats", "sets": 4, "reps": "15", "rest": "30s"},
+            {"name": "Push-Ups", "sets": 4, "reps": "12-15", "rest": "30s"},
+            {"name": "Kettlebell Swings", "sets": 4, "reps": "20", "rest": "30s"},
+            {"name": "Bicycle Crunches", "sets": 4, "reps": "20", "rest": "30s"}
+          ]
+        }
+      }
+    }
+  ]
+}
