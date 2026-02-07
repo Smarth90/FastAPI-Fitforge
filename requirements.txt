@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+requests
+streamlit
+numpy
+pandas
+tqdm
+reportlab
+sentence-transformers
+langchain
+langchain-community
+langchain-core
+google-generativeai
