@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
-from retriever import retrieve
+from backend.rag.retriever import retrieve
 
 
 load_dotenv()
