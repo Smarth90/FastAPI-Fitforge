@@ -1,6 +1,12 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from backend.rag.chain import rag_answer
+from backend.db.base import Base
+from backend.db.session import engine
+from backend.db.models import User, UserProfile, WorkoutPreference, DietPreference
+from backend.db import models
+
+Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title= "FitForge API",
     description= "API for FitForge, your personal fitness assistant.",
