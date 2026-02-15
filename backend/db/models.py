@@ -46,6 +46,7 @@ class User(Base):
 class UserProfile(Base):
     __tablename__ = "UserProfiles"
     id = Column(Integer, primary_key = True, index = True)
+    gender = Column(String)
     user_id = Column(Integer, ForeignKey("Users.id"), unique = True, nullable = False)
     age = Column(Integer, nullable = False)
     weight_kg = Column(Float)
