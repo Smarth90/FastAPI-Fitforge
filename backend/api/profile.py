@@ -4,6 +4,7 @@ from backend.db.session import SessionLocal
 from backend.db.models import UserProfile
 from backend.schemas.profile import UserProfileCreate, UserProfileOut
 
+
 router = APIRouter(prefix="/profile", tags=["Profile"])
 
 def get_db():

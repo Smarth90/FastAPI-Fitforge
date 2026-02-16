@@ -74,8 +74,8 @@ class DietPreference(Base):
     id = Column(Integer, primary_key = True, index = True)
     user_id = Column(Integer, ForeignKey("Users.id"), unique = True)
     diet_type = Column(String)
-    cuisine = Column(Integer)
-    allergies = Column(Integer)
+    cuisine = Column(String)
+    allergies = Column(String)
     dislikes = Column(String)
 
     user = relationship("User", back_populates = "diet_preferences")
