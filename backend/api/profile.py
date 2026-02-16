@@ -3,6 +3,9 @@ from sqlalchemy.orm import Session
 from backend.db.session import SessionLocal
 from backend.db.models import UserProfile
 from backend.schemas.profile import UserProfileCreate, UserProfileOut
+from backend.core.dependencies import get_current_user
+from backend.db.models import User
+
 
 
 router = APIRouter(prefix="/profile", tags=["Profile"])
@@ -15,8 +18,8 @@ def get_db():
         db.close()
 
 @router.post("/", response_model=UserProfileOut)
-def create_or_update_profile(payload: UserProfileCreate, db: Session = Depends(get_db)):
-    user_id = 1  
+def create_or_update_profile(payload: UserProfileCreate, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    user_id = current_user.id 
 
     profile = db.query(UserProfile).filter_by(user_id=user_id).first()
 
@@ -44,8 +47,8 @@ def create_or_update_profile(payload: UserProfileCreate, db: Session = Depends(g
 
 
 @router.get("/", response_model = UserProfileOut)
-def get_profile(db: Session = Depends(get_db)):
-    user_id = 1
+def get_profile(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    user_id = current_user.id
     profile = db.query(UserProfile).filter_by(user_id = user_id).first()
 
     if not profile:

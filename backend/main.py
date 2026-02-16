@@ -6,6 +6,7 @@ from backend.db.session import engine
 from backend.db.models import User, UserProfile, WorkoutPreference, DietPreference
 from backend.db import models
 from backend.api.profile import router as profile_router
+from backend.api.auth import router as auth_router
 
 
 Base.metadata.create_all(bind=engine)
@@ -14,6 +15,8 @@ app = FastAPI(
     description= "API for FitForge, your personal fitness assistant.",
     version= "1.0.0"
 )
+
+app.include_router(auth_router)
 app.include_router(profile_router)
 
 class RAGRequest(BaseModel):
