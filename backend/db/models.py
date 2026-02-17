@@ -30,14 +30,14 @@ class User(Base):
     )
 
     workout_prefernces = relationship(
-    "WorkoutPreference",
+    "WorkoutPreferences",
     back_populates = "user",
     uselist = False,
     cascade = "all, delete-orphan"
     )
 
     diet_preferences = relationship(
-    "DietPreference",
+    "DietPreferences",
     back_populates = "user",
     uselist = False,
     cascade = "all, delete-orphan"
@@ -55,7 +55,7 @@ class UserProfile(Base):
 
     user = relationship("User", back_populates = "profile")
 
-class WorkoutPreference(Base):
+class WorkoutPreferences(Base):
     __tablename__ = "WorkoutPreferences"
     id = Column(Integer, primary_key = True, index = True)
     user_id = Column(Integer, ForeignKey("Users.id"), unique = True)
@@ -69,7 +69,7 @@ class WorkoutPreference(Base):
 
     user = relationship("User", back_populates = "workout_prefernces")
 
-class DietPreference(Base):
+class DietPreferences(Base):
     __tablename__ = "DietPreferences"
     id = Column(Integer, primary_key = True, index = True)
     user_id = Column(Integer, ForeignKey("Users.id"), unique = True)

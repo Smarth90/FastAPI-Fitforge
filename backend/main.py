@@ -1,12 +1,14 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends, HTTPException
 from pydantic import BaseModel
+from sqlalchemy.orm import Session
 from backend.rag.chain import rag_answer
 from backend.db.base import Base
 from backend.db.session import engine
-from backend.db.models import User, UserProfile, WorkoutPreference, DietPreference
+from backend.db.models import User, UserProfile, WorkoutPreferences, DietPreferences
 from backend.db import models
 from backend.api.profile import router as profile_router
 from backend.api.auth import router as auth_router
+from backend.core.dependencies import get_db, get_current_user
 
 
 Base.metadata.create_all(bind=engine)
@@ -32,6 +34,9 @@ def health_check():
     return {"status": "FitForge API is active and running!"}
 
 @app.post("/rag", response_model=RAGResponse, tags=["RAG"])
-def rag_endpoint(request: RAGRequest):
+def rag_endpoint(request: RAGRequest, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    profile = db.query(UserProfile).filter_by(user_id = current_user.id).first()
+    workout = db.query(WorkoutPreferences).filter_by(user_id = current_user.id).first()
+    diet = db.query(DietPreferences).filter_by(user_id = current_user.id).first()
     answer = rag_answer(request.question, k = request.k)
     return {"answer": answer}
