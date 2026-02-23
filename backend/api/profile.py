@@ -5,7 +5,7 @@ from backend.db.models import UserProfile
 from backend.schemas.profile import UserProfileCreate, UserProfileOut
 from backend.core.dependencies import get_current_user
 from backend.db.models import User
-from backend.schemas.workout import UserWorkoutPrefernces, UserWorkoutProfileOut
+
 
 
 
@@ -45,11 +45,6 @@ def create_or_update_profile(payload: UserProfileCreate, db: Session = Depends(g
     db.refresh(profile)
 
     return profile
-
-@router.post("/", response_model = UserProfileOut)
-def update_workout_preferences(payload: UserProfileCreate, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
-    user_id = current_user.id
-    profile =  db.query(UserProfile).filter_by(user_id = user_id).first()
 
 @router.get("/", response_model = UserProfileOut)
 def get_profile(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
