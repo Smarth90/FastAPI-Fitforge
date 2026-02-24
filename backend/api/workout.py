@@ -45,3 +45,12 @@ def create_or_update_workout_preferences(payload: UserWorkoutPrefernces, db: Ses
     db.refresh(profile)
     return profile
 
+
+@router.get("/", response_model = UserWorkoutProfileOut)
+def get_workout_preferences(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    user_id = current_user.id
+    profile = db.query(WorkoutPreferences).filter_by(user_id = user_id).first()
+
+    if not profile:
+        raise HTTPException(status_code = 404, detail = "Workout preferences not found")
+    return profile
