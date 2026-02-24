@@ -54,3 +54,4 @@ def get_workout_preferences(db: Session = Depends(get_db), current_user: User = 
     if not profile:
         raise HTTPException(status_code = 404, detail = "Workout preferences not found")
     return profile
+
