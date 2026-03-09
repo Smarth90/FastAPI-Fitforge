@@ -11,7 +11,7 @@ from backend.api.auth import router as auth_router
 from backend.api.workout import router as workout_router
 from backend.core.dependencies import get_db, get_current_user
 from backend.api.diet import router as diet_router
-
+from backend.api.generate import router as generate_router
 
 Base.metadata.create_all(bind=engine)
 app = FastAPI(
@@ -24,6 +24,7 @@ app.include_router(auth_router)
 app.include_router(profile_router)
 app.include_router(workout_router)
 app.include_router(diet_router)
+app.include_router(generate_router)
 
 class RAGRequest(BaseModel):
     question: str

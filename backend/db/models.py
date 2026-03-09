@@ -11,6 +11,9 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from datetime import datetime
 from backend.db.base import Base
+from sqlalchemy.types import JSON
+from sqlalchemy.sql import func
+from sqlalchemy import Enum
 
 class User(Base):
     __tablename__ = "Users"
@@ -54,6 +57,7 @@ class UserProfile(Base):
     height_in = Column(Integer)
 
     user = relationship("User", back_populates = "profile")
+    plans = relationship("PlanHistory", back_populates= "user")
 
 class WorkoutPreferences(Base):
     __tablename__ = "WorkoutPreferences"
@@ -80,4 +84,16 @@ class DietPreferences(Base):
 
     user = relationship("User", back_populates = "diet_preferences")
 
-    
+# id
+# user_id
+# plan_type
+# plan_json
+# created_at
+class PlanHistory(Base):
+    __tablename__ = "plan_history"
+    id = Column(Integer, primary_key = True, index = True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    plan_type = Column(Enum("workout", "diet", name="plan_type"))
+    plan_json = Column(JSON)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    user = relationship("User", backref="plan_history")
