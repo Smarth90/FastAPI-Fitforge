@@ -38,6 +38,7 @@ def create_or_update_profile(payload: UserProfileCreate, db: Session = Depends(g
             weight_kg=payload.weight_kg,
             height_ft=payload.height_ft,
             height_in=payload.height_in,
+            
         )
         db.add(profile)
 

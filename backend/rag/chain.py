@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-
+import json
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from backend.rag.retriever import retrieve
@@ -40,6 +40,50 @@ Question:
 Provide a clear, helpful answer.
 """
 )
+PLANNER_PROMPT = ChatPromptTemplate.from_template(
+"""
+You are a professional fitness coach.
+
+Generate a weekly workout plan based on the user's profile and preferences.
+
+Use the retrieved fitness knowledge as guidance.
+
+User Context:
+{user_context}
+
+Retrieved Knowledge:
+{context}
+
+IMPORTANT:
+Return ONLY valid JSON.
+
+JSON format:
+
+{
+  "weekly_plan": {
+    "Monday": {
+      "warmup": [],
+      "main": [
+        {"exercise": "Push Ups", "sets": 4, "reps": 12}
+      ],
+      "cooldown": []
+    },
+    "Tuesday": {
+      "warmup": [],
+      "main": [],
+      "cooldown": []
+    }
+  }
+}
+
+Rules:
+- No explanations
+- No markdown
+- Only JSON
+"""
+)
+
+
 
 
 def rag_answer(question: str, k: int = 4) -> str:
@@ -55,6 +99,17 @@ def rag_answer(question: str, k: int = 4) -> str:
     return response.content
 
 
+def rag_generate_plan(user_context: dict, k: int = 4) -> dict:
+    goal = user_context.get("workout_preferences", {}).get("goal", "")
+    docs = retrieve(goal, k = k)
+    context = "\n\n".join(doc.page_content for doc in docs)
+    messages = PLANNER_PROMPT.format_messages(user_context= str(user_context), context = context)
+    response = llm.invoke(messages)
+    try:
+        plan = json.loads(response.content)
+    except Exception:
+        raise ValueError("LLM did not return valid JSON")
+    return plan
 if __name__ == "__main__":
     query = "Give me a workout plan for muscle gain"
     print(rag_answer(query))

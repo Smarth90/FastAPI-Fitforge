@@ -17,3 +17,5 @@ langchain-huggingface
 tf-keras
 langchain-text-splitters
 faiss-cpu
+langchain-openai
+langchain-google-genai

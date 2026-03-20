@@ -9,9 +9,8 @@ from backend.db.models import (
     DietPreferences,
     PlanHistory
 )
-
 from backend.schemas.plan import PlanOut
-from backend.rag.chain import rag_answer
+from backend.rag.chain import rag_answer, rag_generate_plan
 
 router = APIRouter(prefix = "/generate", tags = ["Profile"])
 
@@ -54,7 +53,7 @@ def generate_workout_plan(db: Session = Depends(get_db), current_user: User = De
         },
     }
 
-    generated_plan = rag_answer(str(context))
+    generated_plan = rag_generate_plan(context)
 
     plan_entry = PlanHistory(
         user_id=current_user.id,
