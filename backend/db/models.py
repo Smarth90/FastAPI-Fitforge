@@ -92,7 +92,7 @@ class DietPreferences(Base):
 class PlanHistory(Base):
     __tablename__ = "plan_history"
     id = Column(Integer, primary_key = True, index = True)
-    user_id = Column(Integer, ForeignKey("users.id"))
+    user_id = Column(Integer, ForeignKey("Users.id"))
     plan_type = Column(Enum("workout", "diet", name="plan_type"))
     plan_json = Column(JSON)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
