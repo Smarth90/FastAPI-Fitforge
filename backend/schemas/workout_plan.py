@@ -13,6 +13,6 @@ class DayPlan(BaseModel):
     exercises: List[Exercise]
 
 class WeeklyWorkoutPlan(BaseModel):
-    goal : str
-    fitness_level : str
-    weekly_plan : dict[str, List[Exercise]]
+    goal: str
+    fitness_level: str
+    weekly_plan: dict[str, DayPlan]

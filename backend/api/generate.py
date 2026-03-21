@@ -10,7 +10,9 @@ from backend.db.models import (
     PlanHistory
 )
 from backend.schemas.plan import PlanOut
-from backend.rag.chain import rag_answer, rag_generate_plan
+
+from backend.rag.service import generate_plan_safe
+from backend.rag.chain import rag_answer
 
 router = APIRouter(prefix = "/generate", tags = ["Profile"])
 
@@ -53,7 +55,13 @@ def generate_workout_plan(db: Session = Depends(get_db), current_user: User = De
         },
     }
 
-    generated_plan = rag_generate_plan(context)
+    try:
+        generated_plan = generate_plan_safe(context)
+    except Exception as e:
+        raise HTTPException(
+            status_code = 500,
+            detail = f"Failed to generate plan: {str(e)}"
+        )
 
     plan_entry = PlanHistory(
         user_id=current_user.id,
