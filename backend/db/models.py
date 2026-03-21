@@ -12,7 +12,6 @@ from sqlalchemy.sql import func
 from datetime import datetime
 from backend.db.base import Base
 from sqlalchemy.types import JSON
-from sqlalchemy.sql import func
 from sqlalchemy import Enum
 
 class User(Base):
@@ -32,7 +31,7 @@ class User(Base):
     cascade = "all, delete-orphan"
     )
 
-    workout_prefernces = relationship(
+    workout_preferences = relationship(
     "WorkoutPreferences",
     back_populates = "user",
     uselist = False,
@@ -45,6 +44,10 @@ class User(Base):
     uselist = False,
     cascade = "all, delete-orphan"
     )
+    plan_history = relationship(
+        "PlanHistory",
+        back_populates="user",
+        cascade="all, delete-orphan")
 
 class UserProfile(Base):
     __tablename__ = "UserProfiles"
@@ -57,7 +60,7 @@ class UserProfile(Base):
     height_in = Column(Integer)
 
     user = relationship("User", back_populates = "profile")
-    plans = relationship("PlanHistory", back_populates= "user")
+    
 
 class WorkoutPreferences(Base):
     __tablename__ = "WorkoutPreferences"
@@ -68,8 +71,8 @@ class WorkoutPreferences(Base):
     days_per_week = Column(Integer)
     workout_duration = Column(String)
     equipment = Column(String)
-    workout_types = Column(String)
-    rest_days = Column(String)
+    workout_types = Column(JSON)
+    rest_days = Column(JSON)
 
     user = relationship("User", back_populates = "workout_prefernces")
 
@@ -93,7 +96,7 @@ class PlanHistory(Base):
     __tablename__ = "plan_history"
     id = Column(Integer, primary_key = True, index = True)
     user_id = Column(Integer, ForeignKey("Users.id"))
-    plan_type = Column(Enum("workout", "diet", name="plan_type"))
+    plan_type = Column(String)
     plan_json = Column(JSON)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
-    user = relationship("User", backref="plan_history")
+    user = relationship("User", back_populates="plan_history")

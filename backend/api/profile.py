@@ -6,9 +6,6 @@ from backend.schemas.profile import UserProfileCreate, UserProfileOut
 from backend.core.dependencies import get_current_user
 from backend.db.models import User
 
-
-
-
 router = APIRouter(prefix="/profile", tags=["Profile"])
 
 def get_db():
